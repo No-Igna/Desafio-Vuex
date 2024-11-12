@@ -20,7 +20,7 @@ const store = createStore({
   actions: {
     async getJuegos({ commit }) {
       try {
-        const response = await axios.get('./src/juegos.json');
+        const response = await axios.get('/juegos.json');
         commit("setJuegos", response.data);
       } catch (error) {
         console.error("Error al obtener los juegos:", error);
